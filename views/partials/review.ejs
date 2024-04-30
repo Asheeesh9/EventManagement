@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            /* background:white; */
+        }
+
+        .contain{
+            top: 0;
+            display: flex;
+            position: relative;
+            /* background:white; */
+        }
+
+        .heading{
+            position: absolute;
+            top: 15vh;
+            left: 5vw;
+        }
+
+        .heading h2{
+            font-size: 2.5rem;
+            color: goldenrod;
+            font-family: Lucida Handwriting;
+        }
+
+        .reviews-container {
+            position: relative;
+            overflow: hidden;
+            margin-left: 20rem; 
+            margin-right: 1.5rem;
+            margin-bottom: 5rem;
+            padding: 0; 
+            background:white;
+        }
+
+        .reviews-carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            margin-bottom: 20px; 
+        }
+
+        .review-card {
+            flex: 0 0 30%; 
+            padding: 20px;
+            border-radius: 1rem;
+            height: 250px;
+            /* width: 400px; */
+            /* overflow-y: auto; */
+            transition: transform 0.3s ease; 
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .prev-btn, .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            background: transparent;
+            font-size: 20px; 
+            border-radius: 50%;
+            color: rgb(159, 159, 218);
+        }
+
+        .prev-btn {
+            left: -10px;
+        }
+
+        .next-btn {
+            right: -10px;
+        }
+        .verified_customer_section{
+            /* display: grid; */
+            grid-template-columns: 1fr;
+            border-radius: 10px;
+            border: 1px solid #CEA2FD;
+            background-color: lavender;
+            padding: 5px;
+            max-width: 540px;
+            min-height: 180px;
+            margin: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .image_review{
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+
+        .image_review i{
+            font-size: 16px;
+            color: gold;
+            margin-left: 0;
+            margin-right: 2px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .customer_image{
+            max-width: 80px;
+            max-width: 80px;
+        }
+
+        .customer_image img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+        }
+
+
+        .customer_name{
+            font-family: Poppins;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 0;
+            text-align: left;
+            color: #2e2a39;
+            margin-bottom: 0;
+        }
+
+
+        .customer_bage{
+            float: left;
+            padding-right: 5px;
+        }
+
+        .customer_status .customer_bage img{
+            width: 12px;
+            height: 15px;
+        }
+
+        .customer_status_content{
+            padding-left: 5px;
+            margin-bottom: 0;
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 13px;
+            margin-top: 2px;
+            color: rgb(91, 191, 138);
+        }
+
+        .customer_comment{
+            padding-left: 5px;
+            padding-top: 10px;
+            margin-bottom: 0;
+            font-size: 15px;
+            color: #2e2a39;
+            margin-top: 3px;
+            font-family: Poppins;
+            font-weight: 300;
+            padding-right: 5px;
+            text-align: left;
+            font-style: italic;
+        }
+
+        .customer_image img{
+            height: 3rem;
+            width: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="/public/profile1.jpg" alt=""> -->
+    <div class="contain">
+        <div class="heading">
+            <h2>Reviews</h2>
+        </div>
+        <div class="reviews-container">
+            <div class="reviews-carousel">
+    
+                <div class="review-card">
+    
+                    <div class="verified_customer_section" ng-repeat="review in reviews">
+                        <div class="image_review">
+                            <div class="customer_image">
+                                <img src="profile1.jpg" alt="customer image">
+                           </div>
+                
+                            <div class="customer_name_review_status">
+                                <div class="customer_name">Kiara</div>
+                                <div class="customer_review"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="customer_status">
+                                    <div class="customer_bage"> <img src="https://cdn.shopify.com/s/files/1/0566/8241/4246/t/11/assets/icon-verified-1662629893290.png?v=1662629894" alt=""> </div>
+                                    <div class="customer_status_content">Verified Customer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer_comment">
+                            Our wedding at Blissful Union was perfection! The venue was elegant and every detail was flawless. Thank you for making our special day unforgettable!</div>
+                    </div>
+    
+                </div>
+    
+                <div class="review-card">
+    
+                    <div class="verified_customer_section" ng-repeat="review in reviews">
+                        <div class="image_review">
+                            <div class="customer_image">
+                                <img src="profile2.jpg" alt="customer image">
+                           </div>
+                
+                            <div class="customer_name_review_status">
+                                <div class="customer_name">Supriya</div>
+                                <div class="customer_review"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="customer_status">
+                                    <div class="customer_bage"> <img src="https://cdn.shopify.com/s/files/1/0566/8241/4246/t/11/assets/icon-verified-1662629893290.png?v=1662629894" alt=""> </div>
+                                    <div class="customer_status_content">Verified Customer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer_comment">
+                            "Our wedding at Blissful Union was pure bliss! The venue was stunning and the whole day was like a fairytale.Thanks for our wedding day awesome!"
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="review-card">
+    
+                    <div class="verified_customer_section" ng-repeat="review in reviews">
+                        <div class="image_review">
+                            <div class="customer_image">
+                                <img src="profile3.jpg" alt="customer image">
+                           </div>
+                
+                            <div class="customer_name_review_status">
+                                <div class="customer_name">Rajwant</div>
+                                <div class="customer_review"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="customer_status">
+                                    <div class="customer_bage"> <img src="https://cdn.shopify.com/s/files/1/0566/8241/4246/t/11/assets/icon-verified-1662629893290.png?v=1662629894" alt=""> </div>
+                                    <div class="customer_status_content">Verified Customer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer_comment">
+                            "Our experience with Blissful Union was disappointing. We hoped for a magical day, but unfortunately, it fell short of our expectations."                    </div>
+                    </div>
+    
+                </div>
+    
+                <div class="review-card">
+    
+                    <div class="verified_customer_section" ng-repeat="review in reviews">
+                        <div class="image_review">
+                            <div class="customer_image">
+                                <img src="profile4.png" alt="customer image">
+                           </div>
+                
+                            <div class="customer_name_review_status">
+                                <div class="customer_name">Manish</div>
+                                <div class="customer_review"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="customer_status">
+                                    <div class="customer_bage"> <img src="https://cdn.shopify.com/s/files/1/0566/8241/4246/t/11/assets/icon-verified-1662629893290.png?v=1662629894" alt=""> </div>
+                                    <div class="customer_status_content">Verified Customer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer_comment">
+                            "Unfortunately, our wedding at Blissful Union didn't meet our hopes. It's disappointing when such an important day doesn't go as planned."
+                        </div>
+                    </div>
+    
+                </div>
+                
+    
+                <div class="review-card">
+    
+                    <div class="verified_customer_section" ng-repeat="review in reviews">
+                        <div class="image_review">
+                            <div class="customer_image">
+                                <img src="profile5.png" alt="customer image">
+                           </div>
+                
+                            <div class="customer_name_review_status">
+                                <div class="customer_name">Kautilya</div>
+                                <div class="customer_review"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="customer_status">
+                                    <div class="customer_bage"> <img src="https://cdn.shopify.com/s/files/1/0566/8241/4246/t/11/assets/icon-verified-1662629893290.png?v=1662629894" alt=""> </div>
+                                    <div class="customer_status_content">Verified Customer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer_comment">
+                            "Blissful Union made our wedding a dream! From the stunning venue, every moment was magical. Thank you for the happiest day of our lives!"                    </div>
+                    </div>
+    
+                </div>
+    
+                <div class="review-card">
+    
+                    <div class="verified_customer_section" ng-repeat="review in reviews">
+                        <div class="image_review">
+                            <div class="customer_image">
+                                <img src="profile1.jpg" alt="customer image">
+                           </div>
+                
+                            <div class="customer_name_review_status">
+                                <div class="customer_name">Nandini</div>
+                                <div class="customer_review"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                                <div class="customer_status">
+                                    <div class="customer_bage"> <img src="https://cdn.shopify.com/s/files/1/0566/8241/4246/t/11/assets/icon-verified-1662629893290.png?v=1662629894" alt=""> </div>
+                                    <div class="customer_status_content">Verified Customer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer_comment">
+                            "Blissful Union exceeded all our expectations! Our guests are still raving about how incredible our wedding was. Thank you for the memories!"                    </div>
+                    </div>
+    
+                </div>
+    
+                <!-- <div class="review-card">Review 2</div>    
+                <div class="review-card">Review 3</div>
+                <div class="review-card">Review 4</div>
+                <div class="review-card">Review 5</div>
+                <div class="review-card">Review 6</div>
+                <div class="review-card">Review 7</div>
+                <div class="review-card">Review 8</div>
+                <div class="review-card">Review 9</div> -->
+            </div>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button> 
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+    
+
+    <!-- <script>
+        const carousel = document.querySelector('.reviews-carousel');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        const reviewCards = document.querySelectorAll('.review-card');
+        const cardWidth = reviewCards[0].clientWidth;
+        const reviewsPerPage = 1; // Shift one review card at a time
+        const totalReviews = reviewCards.length;
+        const maxCounter = totalReviews - reviewsPerPage; // Maximum counter value
+
+        let counter = 0;
+
+        updateButtonState();
+
+        function updateButtonState() {
+            prevBtn.disabled = counter === 0;
+            nextBtn.disabled = counter === maxCounter;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (counter < maxCounter) { //to stop scrolling when last card is reached
+                counter++;
+             }
+                carousel.style.transform = translateX(-${counter * cardWidth * reviewsPerPage}px);
+                updateButtonState();
+            });
+
+        prevBtn.addEventListener('click', () => {
+            if (counter > 0) {
+                counter--;
+                carousel.style.transform = translateX(-${counter * cardWidth * reviewsPerPage}px);
+                updateButtonState();
+            }
+        });
+    </script> -->
+
+    <script>
+        const carousel = document.querySelector('.reviews-carousel');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        const reviewCards = document.querySelectorAll('.review-card');
+        const cardWidth = reviewCards[0].clientWidth;
+        const reviewsPerPage = 1; // Shift one review card at a time
+        const totalReviews = reviewCards.length;
+        const maxCounter = totalReviews - reviewsPerPage; // Maximum counter value
+
+        let counter = 0;
+
+        updateButtonState();
+
+        function updateButtonState() {
+            prevBtn.disabled = counter === 0;
+            nextBtn.disabled = counter === maxCounter;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (counter < maxCounter-2) { //to stop scrolling when last card is reached
+                counter++;
+             }
+                carousel.style.transform = translateX(-${counter * cardWidth * reviewsPerPage}px);
+                updateButtonState();
+            });
+
+        prevBtn.addEventListener('click', () => {
+            if (counter > 0) {
+                counter--;
+                carousel.style.transform = translateX(-${counter * cardWidth * reviewsPerPage}px);
+                updateButtonState();
+            }
+        });
+    </script>
+
+</body>
+</html>

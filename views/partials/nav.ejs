@@ -1,0 +1,43 @@
+<style>
+  .site-title{
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: 250px;
+    font-family: Lucida Handwriting , Apple Chancery , Brush Script;
+    color: #703794;
+  }
+
+  .site-title h1{
+    color: #b57ed7;
+  }
+  
+</style>
+<nav>
+
+  <div class="container">
+  <div class="site-title">
+    <a href="/index"><h1>Posts and Testimonials</h1></a>
+  </div>
+  <div>
+  <ul class="navbar">
+    
+    <li><a href="../blogs/create">New Blog</a></li>
+    <!-- <li><a href="../talk/credentials">New Blog</a></li> -->
+      <li><a href="/">Home</a></li>
+      <li><a href="../blogs">Blog</a></li>
+      <li><a href="../blg2">Albums&Videos</a></li>
+      <li><a href="../services">Services</a></li>
+      <li><a href="../ritual">Ritual</a></li>
+      <li><a href="../talk">Let's Talk</a></li>
+      <% if (user) { %>
+          <li class="nav__item">Welcome</li>
+          <li class="nav__item"><a href="/logout" class="nav__link">Log out</a></li>
+        <% } else { %>
+          <li class="nav__item"><a href="/login" class="nav__link">Log in</a></li>
+          <li class="nav__item"><a href="/signup" class="nav__link">Sign up</a></li>
+        <% } %>
+  </ul>
+
+</div>
+</div> 
+</nav>

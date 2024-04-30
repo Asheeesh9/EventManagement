@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../random"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "random"
+	}
+}

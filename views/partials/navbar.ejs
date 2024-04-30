@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #B57ED7; 
+    padding: 10px 20px; 
+}
+
+.navbar {
+    list-style-type: none; 
+    text-align: right; 
+
+}
+
+.navbar li {
+    display: inline-block; 
+    margin-left: 25px; 
+}
+
+.navbar li a {
+    font-size: 18px;
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px 12px;
+    transition: color 0.3s;
+}
+
+.navbar li a:hover {
+    color: rgb(218, 160, 12);
+}
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="../blogs">Blog</a></li>
+            <li><a href="../blg2">Albums&Videos</a></li>
+            <li><a href="../services">Services</a></li>
+            <li><a href="../ritual">Ritual</a></li>
+            <li><a href="../talk">Let's Talk</a></li>
+            <% if (user) { %>
+                <li class="nav__item">Welcome</li>
+                <li class="nav__item"><a href="/logout" class="nav__link">Log out</a></li>
+              <% } else { %>
+                <li class="nav__item"><a href="/login" class="nav__link">Log in</a></li>
+                <li class="nav__item"><a href="/signup" class="nav__link">Sign up</a></li>
+              <% } %>
+        </ul>
+    </nav>
+</header>
+
+</body>
+</html>

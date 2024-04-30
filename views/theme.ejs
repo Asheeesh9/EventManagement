@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #595252;
+            background: linear-gradient(to left, rgb(165, 165, 213) , pink);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container img {
+            height: 20rem;
+            width: 30rem;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container-one,
+        .container-two,
+        .container-three,
+        .container-four,
+        .container-five,
+        .container-six,
+        .container-seven {
+            display: flex;
+            gap: 4rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            width: 100%;
+            max-width: 600px;
+            /* border-color: gold; */
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .text:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .text strong {
+            color: wheat;
+        }
+
+        .container div {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/navbar'); -%>
+
+    <div class="container">
+        <div class="container-one">
+            <img src="./assets/s1.jpg" alt="">
+            <div class="text">
+                <div><strong>Destination Wedding</strong></div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas ipsum dolor, veniam suscipit amet delectus, ullam repudiandae assumenda tempore quasi quam sit iure. Unde, velit nesciunt. At quasi fugit aperiam quia, ullam quis doloribus ab, sapiente quo similique quod, unde fuga vel veritatis. Nihil fugiat nesciunt exercitationem impedit modi!
+            </div>
+        </div>
+        <div class="container-two">
+            <div class="text">
+                <div><strong>Themed Wedding</strong></div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas ipsum dolor, veniam suscipit amet delectus, ullam repudiandae assumenda tempore quasi quam sit iure. Unde, velit nesciunt. At quasi fugit aperiam quia, ullam quis doloribus ab, sapiente quo similique quod, unde fuga vel veritatis. Nihil fugiat nesciunt exercitationem impedit modi!
+            </div>
+            <img src="./assets/s2.h" alt="">
+        </div>
+        <div class="container-three">
+            <img src="./assets/s3.jpg" alt="">
+            <div class="text">
+                <div><strong>Intimate Wedding</strong></div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas ipsum dolor, veniam suscipit amet delectus, ullam repudiandae assumenda tempore quasi quam sit iure. Unde, velit nesciunt. At quasi fugit aperiam quia, ullam quis doloribus ab, sapiente quo similique quod, unde fuga vel veritatis. Nihil fugiat nesciunt exercitationem impedit modi!
+            </div>
+        </div>
+        <div class="container-four">
+            <div class="text">
+                <div><strong>Cultural Wedding</strong></div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas ipsum dolor, veniam suscipit amet delectus, ullam repudiandae assumenda tempore quasi quam sit iure. Unde, velit nesciunt. At quasi fugit aperiam quia, ullam quis doloribus ab, sapiente quo similique quod, unde fuga vel veritatis. Nihil fugiat nesciunt exercitationem impedit modi!
+            </div>
+            <img src="./assets/s4.jpg" alt="">
+        </div>
+        <div class="container-five">
+            <img src="./assets/s5.jpg" alt="">
+            <div class="text">
+                <div><strong>Cruise Wedding</strong></div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas ipsum dolor, veniam suscipit amet delectus, ullam repudiandae assumenda tempore quasi quam sit iure. Unde, velit nesciunt. At quasi fugit aperiam quia, ullam quis doloribus ab, sapiente quo similique quod, unde fuga vel veritatis. Nihil fugiat nesciunt exercitationem impedit modi!
+            </div>
+        </div>
+        <div class="container-six">
+            <div class="text">
+                <div><strong>Adventure Wedding</strong></div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quas ipsum dolor, veniam suscipit amet delectus, ullam repudiandae assumenda tempore quasi quam sit iure. Unde, velit nesciunt. At quasi fugit aperiam quia, ullam quis doloribus ab, sapiente quo similique quod, unde fuga vel veritatis. Nihil fugiat nesciunt exercitationem impedit modi!
+            </div>
+            <img src="./assets/s6.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

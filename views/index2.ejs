@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Inquiry Form</title>
+    <link rel="stylesheet" href="lets_talk.css"> <!-- Link to external CSS for styling -->
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #efe1fb;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    margin: 50px ;
+
+    display:flex;
+}
+
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #f9f9f9; 
+}
+
+.container {
+    margin: 20px;
+    max-width: 60%;
+    padding:30px 30px 30px 15px;;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+ 
+.image-container {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+}
+
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    animation: floatAnimation 5s ease-in-out infinite;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.9);
+    
+}
+
+
+
+h2 {
+    text-align: center;
+    color: #333333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.name-fields {
+    display: flex;
+    justify-content: space-between; /* Add space between flex items */
+}
+
+.name-fields input {
+    flex: 1; /* Allow inputs to grow and fill remaining space */
+    margin-right: 20px; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+#helpNeeded{
+    height: 150px; /* Adjust the height as needed */
+    resize: vertical;
+}
+
+
+button {
+    width: 30%; /* Set button width to 30% of container */
+    padding: 10px;
+    background-color: #c38cff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Ensure button is displayed as block-level element */
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+button:hover {
+    background-color: #ac66d8;
+}
+
+.image-container {
+    animation: slideInRight 1s ease-in-out;
+  }
+
+ @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+.container {
+    animation: slideInLeft 1s ease-in-out forwards; 
+  }
+
+  @keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+</style>
+<body>
+    <%- include('partials/navbar'); -%>
+
+    <div class="content">
+        <div class="container">
+            <p>Let's Plan Your Event Together!
+    
+                Ready to start planning your dream event? Fill out the form below or reach out to us.
+                <br>
+                We aim to respond within 48 hours. We look forward to making your event unforgettable!</p>
+            <form action="submit.php" method="POST">
+                <div class="form-group">
+                    <label for="firstName">Name</label>
+                    <div class="name-fields">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="partnerFirstName">Partner's Name</label>
+                    <div class="name-fields">
+                        <input type="text" id="partnerFirstName" name="partnerFirstName" placeholder="Partner's First Name" required>
+                        <input type="text" id="partnerLastName" name="partnerLastName" placeholder="Partner's Last Name" required>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="eventDate">Event Date</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="eventLocation">Event Location</label>
+                    <input type="text" id="eventLocation" name="eventLocation" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="howFound">How did you find our website?</label>
+                    <input type="text" id="howFound" name="howFound">
+                </div>
+    
+                <div class="form-group">
+                    <label for="helpNeeded">How can we help you?</label>
+                    <textarea id="helpNeeded" name="helpNeeded"></textarea>
+                </div>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="./Lets_talkimg/image1.jpg">
+            <img src="./Lets_talkimg/image3.jpg">
+            <img src="./Lets_talkimg/imag2.jpg">
+        </div>
+    </div>
+    
+</body>
+</html>

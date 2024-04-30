@@ -1,0 +1,98 @@
+<%- include('partials/header'); -%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <style>
+      #cards
+      {
+        margin-top:10vh;
+        /* margin-top:20vh; */
+      }
+      body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  .contain{
+    /* background-color: white; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+  }
+  
+  .containerss {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .containerss h1 {
+    font-size: 3rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(120deg, #e192e6, #da1dcd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .containerss h1::after {
+    content: '';
+    background: #e0c94b;
+    width: 60%;
+    height: 6px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+  }
+
+     </style>
+  </head>
+  <body>
+    <div class="containerss" style="margin-top:20vh;">
+      <h1>Choose your Ritual</h1>
+    </div>
+    <div id="cards" class="cards contain">
+        <div class="card" style="width: 20rem; box-shadow: 4px 5px 7px #e192e6;">
+          <img src="card1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Muslim Wedding</h5>
+            <p class="card-text"> Experience the vibrant colors and sacred rituals of a Hindu wedding with Blissful Union. Let us create an enchanting atmosphere filled with blessings, laughter, and everlasting memories.</p>
+            <a href="#" class="btn btn-primary">See More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem; box-shadow: 4px 5px 7px #e192e6;">
+          <img src="card2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Hindu Wedding</h5>
+            <p class="card-text">Embrace the elegance and spirituality of a Muslim wedding with Blissful Union. Trust us to craft a seamless fusion of tradition and modernity, where your love story unfolds amidst blessings and cherished moments.</p>
+            <a href="#" class="btn btn-primary">See More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem; box-shadow: 4px 5px 7px #e192e6;">
+          <img src="card3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Christian Wedding</h5>
+            <p class="card-text">Celebrate love, faith, and hope with Blissful Union. Allow us to create an enchanting setting filled with elegance and timeless accents, where your journey together begins in the presence of God and loved ones.</p>
+            <a href="#" class="btn btn-primary">See More</a>
+          </div>
+        </div>
+      </div>
+    
+       
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
+  </body>
+
+  <%- include('partials/footer'); -%>
